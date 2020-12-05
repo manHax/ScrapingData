@@ -27,10 +27,10 @@ def search_for_hashtags(consumer_key, consumer_secret, access_token, access_toke
         for tweet in tweepy.Cursor(api.search, q=hashtag_phrase+' -filter:retweets', \
                                    lang="en", tweet_mode='extended').items(100):
             w.writerow([tweet.created_at, tweet.full_text.replace('\n',' ').encode('utf-8'), tweet.user.screen_name.encode('utf-8'), [e['text'] for e in tweet._json['entities']['hashtags']], tweet.user.followers_count])
-consumer_key = 'G34wfXXc7zmwTNGKa99nfb5O3'
-consumer_secret = 'dHw4a5WNKbpFppqz4ebzHFkhcaWfY8d8N9stctlDCxTbpR80OI'
-access_token = '4782248894-X1b7zPLWMLXjtmwysouAE5ApftA1ru1sfRlO7nF'
-access_token_secret = 'HmRSLKu4R23gB7OPuOPlhohwdi2ARg31s7urfPbUwkwCM'
+consumer_key = '/add-your-own'
+consumer_secret = '/add-your-own'
+access_token = '/add-your-own'
+access_token_secret = '/add-your-own'
     
 hashtag_phrase = input('Hashtag Phrase ')
 
